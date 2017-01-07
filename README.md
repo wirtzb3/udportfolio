@@ -26,7 +26,8 @@ Some useful tips to help you get started:
 
 
 ### Optimizations for Part 1:
-(Changes made in udportfolio/index.html)
+Changes made in udportfolio/index.html
+
 1. Line 11: Took out web fonts because it slowed down performance significantly
 2. Line 12: Inlined style.css to eliminate a render-blocking resource request
 3. Line 13-25: Add async to all script tags
@@ -34,7 +35,8 @@ Some useful tips to help you get started:
 
 
 ### Optimizations for Part 2:
-(Changes made in udportfolio/views/js/main.html)
+Changes made in udportfolio/views/js/main.html
+
 1. Line 406: Used a more specific selector to call element (querySelector --> getElementById)
 2. Line 444: Used a more specific selector to call element (querySelector --> getElementsByClassName); declared variable and called element before/outside of loop, to be used in loop and initialization of loop
 3. Line 445: Took calculation out of loop so calculations would be done before loop
