@@ -403,7 +403,7 @@ var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
   // Changes the value for the size of the pizza above the slider
-  //Optimization: More specific selector (querySelector --> getElementById)
+  //Optimization: More specific selector
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
@@ -497,7 +497,7 @@ function updatePositions() {
   //Optimization: changed querySelectorAll to getElementsByClassName
   var items = document.getElementsByClassName('mover');
   //Optimization: If there are only ever going to be five phases, you can precalculate them
-  //and then push them to an array. That way, the sin calculation doesn't have to be
+  //and then push them to an array. That way, the sine calculation doesn't have to be
   //performed for every item in the array
   var phaseArray = [];
   for (var i = 0; i < 5; i++) {
@@ -528,7 +528,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  //Optimization: moved the query out of the loop, so it appends without the query to get the element
+  //Optimization: moved the query out of the loop
   //Optimization: changed querySelectorAll to getElementById
   var movingPizzas = document.getElementById('movingPizzas1');
   for (var i = 0; i < 50; i++) {
@@ -540,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.left = (i % cols) * s + 'px';
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     movingPizzas.appendChild(elem);
-
+  //Optimization: moved updatePositions into requestAnimationFrame
     requestAnimationFrame(updatePositions);
   }
   requestAnimationFrame(updatePositions);
