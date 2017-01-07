@@ -11,7 +11,7 @@ In part 2, our task was to take a janky, horrible website and make it run consis
 Some useful tips to help you open my project:
 
 1. Clone my repository https://github.com/wirtzb3/udportfolio
-1. To inspect the site on your phone, you can run a local server
+2. To inspect the site on your phone, you can run a local server
 
   ```bash
   $> cd /path/to/your-project-folder
@@ -19,7 +19,7 @@ Some useful tips to help you open my project:
   ```
 If you want to find PageSpeed Insights for portfolio page:
 1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
+2. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
   ``` bash
   $> cd /path/to/your-project-folder
