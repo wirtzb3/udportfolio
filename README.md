@@ -28,6 +28,10 @@ If you want to find PageSpeed Insights for portfolio page:
 
 1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
 
+OR
+
+1. Open your browser and visit [My Project](https://wirtzb3.github.io/udportfolio/)
+
 
 ### Optimizations for Part 1:
 Changes made in udportfolio/index.html
