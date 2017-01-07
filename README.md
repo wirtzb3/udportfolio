@@ -2,18 +2,22 @@
 
 The objective was to optimize an online portfolio for speed! In particular, to optimize the critical rendering path and make the page render as quickly as possible by applying the techniques we've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
+In part 1, our task was to take a portfolio page and optimize it for the PageSpeed Insight score to reach above 90 for both mobile and desktop.
+
+In part 2, our task was to take a janky, horrible website and make it run consistently at 60FPS.
+
 ### Getting started
 
-Some useful tips to help you get started:
+Some useful tips to help you open my project:
 
-1. Check out the repository
+1. Clone my repository https://github.com/wirtzb3/udportfolio
 1. To inspect the site on your phone, you can run a local server
 
   ```bash
   $> cd /path/to/your-project-folder
   $> python -m SimpleHTTPServer 8080
   ```
-
+If you want to find PageSpeed Insights for portfolio page:
 1. Open a browser and visit localhost:8080
 1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
