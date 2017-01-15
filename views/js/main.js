@@ -497,7 +497,7 @@ function updatePositions() {
   //Optimization: changed querySelectorAll to getElementsByClassName
   var items = document.getElementsByClassName('mover');
   //Optimization: If there are only ever going to be five phases, you can precalculate them
-  //and then push them to an array. That way, the sine calculation doesn't have to be
+  //and then push them to an array. That way, the calculation doesn't have to be
   //performed for every item in the array
   var phaseArray = [];
   for (var i = 0; i < 5; i++) {
@@ -508,6 +508,7 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
      phase = phaseArray[i % 5];
     //Optimization: transform instead of style.left to avoid triggering layout
+    //Read the forums and https://developer.mozilla.org/en-US/docs/Web/CSS/transform for this optimization
     items[i].style.transform = "translateX(" + 100 * phase + "px)";
   }
 
@@ -541,7 +542,8 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     movingPizzas.appendChild(elem);
   //Optimization: moved updatePositions into requestAnimationFrame
-    requestAnimationFrame(updatePositions);
+  //From: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+    window.requestAnimationFrame(updatePositions);
   }
-  requestAnimationFrame(updatePositions);
+  window.requestAnimationFrame(updatePositions);
 });
